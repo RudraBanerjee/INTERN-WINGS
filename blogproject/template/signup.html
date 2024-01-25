@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'stylesignup.css' %}">
+    <title>Signup</title>
+</head>
+
+<body>
+    <div class="heading" style="height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    padding: 2vh 10vw;">
+        <h1>#HashBlogs#</h1>
+    </div>
+{% if messages %}
+{% for message in messages %}
+<div id="message-bar" class="hidden {{message.tags}}">
+    <span id="message-text">{{message}}</span>
+        <button id="close-button">Close</button>
+</div>
+{% endfor %}
+{% endif %}
+    <div class="labels">  
+        <form action="submitsignup" method="POST">
+            {% csrf_token %}
+            <div class="label">
+                <label for="name">Name:</label>
+                <input type="name" name="name" class="inputbox" required>
+            </div>
+            <div class="label">
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="inputbox">
+            </div>
+            <div class="label">
+                <label for="username">Username:</label>
+                <input type="text" name="username" class="inputbox" required>
+            </div>
+            <div class="label">
+                <label for="Password">Password:</label>
+                <input type="Password" name="password" class="inputbox" required>
+            </div>
+            <div class="label">
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="text" name="confirmpassword" class="inputbox" required>
+            </div>
+            <div class="label">
+                <label for="DOB">Date of Birth:</label>
+                <input type="date" name="DOB" class="inputbox" required>
+                <br>(To check above or below 18)
+                
+            </div>
+            <div class="btn">
+                <button type="submit" class="submit" value="Submit">Submit</button>
+            </div>
+        </form>
+    </div>
+        
+    <div class="lastpart">
+        Developed by Rudra Banerjee &copy 2024
+    </div>
+    <script src="{% static 'script.js' %}" defer></script>
+</body>
+
+</html>

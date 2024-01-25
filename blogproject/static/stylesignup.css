@@ -1,0 +1,53 @@
+@import url(stylelogin.css);
+
+.labels{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9vh 7vw;
+    margin: 5vh 20vw 5vh;
+    border:  solid green;
+
+}
+.label{
+    font-size: large;
+    font-weight: 600;
+    margin: 1vh;
+    padding: .5vh 2vw;
+}
+#message-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99vw;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.success{
+  background-color: #4CAF50; 
+}
+.error{
+  background-color: orange;
+}
+  
+  #close-button {
+    background-color: #f44336; /* Red close button color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #close-button:hover {
+    background-color: #45a049; /* Darker red on hover */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

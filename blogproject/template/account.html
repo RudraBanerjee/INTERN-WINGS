@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block stylesheet %}
+    <link rel="stylesheet" href="{% static 'styleindex.css' %}">
+    <link rel="stylesheet" href="{% static 'stylesignup.css' %}">
+    <link rel="stylesheet" href="{% static 'styleaccount.css' %}">
+    {% endblock stylesheet %}
+    <title>My Account</title>
+</head>
+<body>
+    {% block body %}
+        <div class="body">
+            <div class="labels">
+                <div class="label">
+                    NAME:{{name}}
+                </div>
+                <div class="label">
+                    E-MAIL ID:{{email}}
+                </div>
+                <div class="label">
+                    USERNAME:{{username}}
+                </div>
+                <div class="label">
+                    PASSWORD:{{password}}
+                </div>
+                <div class="label">
+                    DATE OF BIRTH:{{dob}}
+                </div>
+                <button id="logout">LOGOUT</button>
+            </div>
+            <script>
+                var logout=document.getElementById('logout')
+                logout.addEventListener('click',function(){
+                    window.location.href='logout'
+                })
+            </script>
+        </div>
+    {% endblock body %}
+</body>
+</html>

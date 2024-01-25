@@ -1,0 +1,59 @@
+{% extends "Base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    {% block stylesheet %}
+      <link rel="stylesheet" href="{% static 'stylesignup.css' %}">
+    {% endblock stylesheet %}
+    
+    <title>Create Post</title>
+</head>
+
+<body>
+    {% block body %}
+    {% if messages %}
+    {% for message in messages %}
+    <div id="message-bar" class="hidden {{message.tags}}">
+        <span id="message-text">{{message}}</span>
+        <button id="close-button">Close</button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="body">
+        <div class="labels">
+            <form action="post_created" method="POST">
+                {% csrf_token %}
+
+                <div class="label">
+                    <label for="title" style="color:black">Title</label>
+                    <input type="text" name="title" class="form-input" required>
+                </div>
+                <div class="label">
+                    <label for="Catagories" style="color:black">Catagories</label>
+                    <select name="Catagories" id="Catagories" class="form-input" required>
+                        <option value="Technical"><a href="#">Technical</a></option>
+                        <option value="Food"><a href="#">Food</a></option>
+                        <option value="Travels"><a href="#">Travel</a></option>
+                        <option value="News"><a href="#">News</a></option>
+                        <option value="health"><a href="#">Health & Fitness</a></option>
+                        <option value="Others"><a href="#">Others</a></option>
+                    </select>
+                </div>
+                <div class="label" style="color:black;display:flex;align-items:center">
+                    <label for="content" style="color:black">Content</label>
+                    <textarea type="text" cols="20" rows="10" name="content" class="form-input" required></textarea>
+                </div>
+                <div class="btn">
+                    <button type="submit" class="submit" value="submit">POST</button>
+                </div> 
+            </form>
+        </div>
+        <script src="{% static 'script.js' %}" defer></script>
+    {% endblock body %}
+    
+</body>
+</html>

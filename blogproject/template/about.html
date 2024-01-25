@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    {% block body %}
+    <div class="body">
+        <div class="ads">
+            <div class="ad" id="google">
+                Ad of google
+            </div>
+            <div class="ad" id="facebook">
+                Ad of facebook
+            </div>
+            <div class="ad" id="youtube">
+                Ad of youtube
+            </div>
+        </div>
+        <div class="blogs">
+            <div class="blog">
+                <h4>About Us</h4>
+               
+                <p>This a blogging website using HTML,CSS,Js for frontend part and Django framework of python for the backend part.It has features like searching,post listing and to filtering them according to the required catagory which the reader wants to read.It also provides facility to create new posts and share them for the user as well as the other users to see.It also has login and logout as well as first time signup facility which stores the data inputed from user to fetch during showing the account details to the user.It is made such as way that it is responsive even in phones.For any futher feedback or idea for betterment of this website, feel free to contact me(Rudra Banerjee) at rudrabanerjee2002@gmail.com</p> <br>
+            </div>
+            
+        </div>
+    </div>
+    {% endblock body %}
+</body>
+</html>

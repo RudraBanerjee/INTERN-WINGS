@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "stylelogin.css" %}">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="heading" style="height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    padding: 4vh 10vw;">
+        <h1 style="opacity:0;
+        animation:slideDown 0.8s ease forwards">#HashBlogs#</h1>
+    </div>
+    <div class="mainbody">
+        <div class="labels">
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <div class="label">
+                    <label for="Username" class="form-label">Username</label>
+                    <input type="text" name="username" class="form-input" required>
+                </div>
+                <div class="label">
+                    <label for="Password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-input" required>
+                </div>
+                <input type="hidden" name="next" value="{{ request.GET.next }}">
+                <div class="btn">
+                    <button type="submit" class="submit" value="Submit">Submit</button>
+                </div>   
+            </form>
+        </div>
+        <div class="signup">
+            <a href="/signup" id="signup">Don't have an account.Don't worry!! Click here.</a>
+        </div>
+    </div>
+    
+    <div class="lastpart">
+        Developed by Rudra Banerjee &copy 2024
+    </div>
+</body>
+
+</html>

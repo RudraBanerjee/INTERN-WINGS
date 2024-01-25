@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    background-color: aqua;
+}
+input{
+    padding: .5vh;
+}
+.mainbody{
+    height: 52vh;
+   
+}
+@keyframes slideDown {
+    0%{
+        transform: translatey(0px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(2vh);
+        opacity: 1;
+    }
+}
+.labels{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 7vw;
+    margin: 10vh 20vw 2vh;
+    border:  solid green;
+
+}
+.label{
+    font-size: large;
+    font-weight: 600;
+    margin: 2vh;
+    padding: 2vh 2vw;
+}
+label:hover{
+    font-size:larger ;
+}
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#signup:hover{
+    font-style: italic;
+    text-decoration: dotted;
+    box-shadow: 0 0 2vw blue;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button:hover{
+    background-color: blue;
+    color: azure;
+    box-shadow: 0 0 2vw blue,0 0 2vw blue;
+}
+.submit{
+    padding: .5vh 1vw;
+}
+.lastpart{
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    height: 9vh;
+    background-color: lightgreen;
+    color: black;
+    font-weight: 600;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 10vh ;
+}
+@media screen and (max-width:690px){
+    .heading,.lastpart{
+        position: sticky;
+        position: -webkit-sticky;
+        z-index: 100;
+    }
+    .labels{
+        padding: 5vh 7vw;
+    }
+}
