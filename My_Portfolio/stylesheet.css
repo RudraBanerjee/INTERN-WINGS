@@ -326,13 +326,6 @@ body {
 .services-list div:hover{
     transform: translateY(-10px);
 }
-/* section{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    flex-wrap: wrap; 
-} */
 .container1{
     padding:  2vh 3vh 10vh 5vw;
     margin-left: 3vw;
@@ -440,7 +433,6 @@ body {
 }
 .progress-line span::after{
     position: absolute;
-    /* padding: 1px 8px; */
     background-color: #0000;
     color: #fff;
     font-size: 12px;
