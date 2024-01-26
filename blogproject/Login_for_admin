@@ -1,0 +1,5 @@
+use python manage.py runserver to start the server.
+Then to go to admin page..Just click on the search bar and next to your server url write-/admin
+then use-Username:admin
+          password:admin
+for login in admin panel.Now tou can see all the blogs and the users and their credentials.
